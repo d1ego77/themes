@@ -1,0 +1,66 @@
+{
+	"name": "textpad-icon-theme",
+	"displayName": "TextPad Icon Theme",
+	"description": "A simple MacOS Modern Icon Theme Fork",
+	"version": "1.2.0",
+	"publisher": "damc",
+	"engines": {
+		"vscode": "^1.25.0"
+	},
+	"keywords": [
+		"icon-theme",
+		"textpad",
+		"macos",
+		"native",
+		"mojave"
+	],
+	"preview": true,
+	"homepage": "https://github.com/damc-code/macos-modern-vscode-theme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/damc-code/macos-modern-vscode-theme.git"
+	},
+	"icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#0F0F0F",
+		"theme": "dark"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [],
+		"iconThemes": [
+			{
+				"id": "textpad-legit-finder-icon-theme",
+				"label": "TextPad - Legit Finder Icons",
+				"path": "./themes/icon/legit-finder.json"
+			},
+			{
+				"id": "textpad-legit-xcode-icon-theme",
+				"label": "TextPad - Legit Xcode Icons",
+				"path": "./themes/icon/legit-xcode.json"
+			},
+			{
+				"id": "textpad-minimal-finder-icon-theme",
+				"label": "TextPad - Minimal Finder Icons",
+				"path": "./themes/icon/minimal-finder.json"
+			},
+			{
+				"id": "textpad-minimal-xcode-icon-theme",
+				"label": "TextPad - Minimal Xcode Icons",
+				"path": "./themes/icon/minimal-xcode.json"
+			},
+			{
+				"id": "textpad-minimal-mono-icon-theme",
+				"label": "TextPad - Minimal Monochrome Icons",
+				"path": "./themes/icon/minimal-mono.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "9c8590d7-f74d-4502-a0ab-74f6524d69f7",
+		"publisherId": "c9ce9377-81b2-4c17-af7b-b7b6aa4d8c3c",
+		"publisherDisplayName": "damc"
+	}
+}
