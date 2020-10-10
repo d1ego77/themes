@@ -1,4 +1,4 @@
--- Guess the number: example taked from http://www.rosettacode.org/
+-- Guess the number: example taken from http://www.rosettacode.org/
 math.randomseed( os.time() )
 n = math.random( 1, 10 )
  

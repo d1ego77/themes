@@ -1,5 +1,5 @@
 global _start
- ;  Guess the number: example taked from http://www.rosettacode.org/
+ ;  Guess the number: example taken from http://www.rosettacode.org/
 section .data
  
     rand dd 0

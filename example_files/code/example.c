@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
  
-// Guess the number: example taked from http://www.rosettacode.org/
+// Guess the number: example taken from http://www.rosettacode.org/
 int main(void)
 {
     int n;

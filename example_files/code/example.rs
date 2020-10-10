@@ -1,6 +1,6 @@
 extern crate rand;
 
- // Guess the number: example taked from http://www.rosettacode.org/
+ // Guess the number: example taken from http://www.rosettacode.org/
 fn main() {
     println!("Type in an integer between 1 and 10 and press enter.");
  

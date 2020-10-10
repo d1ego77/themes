@@ -1,7 +1,7 @@
 using System;
 class GuessTheNumberGame
 {
-    // Guess the number: example taked from http://www.rosettacode.org/
+    // Guess the number: example taken from http://www.rosettacode.org/
     static void Main()
     {
         int randomNumber = new Random().Next(1, 11);

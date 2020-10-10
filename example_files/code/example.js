@@ -9,5 +9,5 @@ function guessNumber() {
     alert('Congratulations!\nThe number was ' + num);
   }
 
-  // Guess the number: example taked from http://www.rosettacode.org/
+  // Guess the number: example taken from http://www.rosettacode.org/
   guessNumber();

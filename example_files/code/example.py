@@ -9,6 +9,6 @@ def guest_number():
     while t!=g:g=int(input("Guess again! "))
     print("That's right!")
 
-# Guess the number: example taked from http://www.rosettacode.org/
+# Guess the number: example taken from http://www.rosettacode.org/
 if __name__ == '__main__':
     guest_number()

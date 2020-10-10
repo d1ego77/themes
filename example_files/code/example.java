@@ -1,6 +1,6 @@
 public class Guessing {
 
-    // Guess the number: example taked from http://www.rosettacode.org/
+    // Guess the number: example taken from http://www.rosettacode.org/
 
     public static void main(String[] args) throws NumberFormatException{
         

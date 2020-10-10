@@ -1,4 +1,4 @@
-// Guess the number: example taked from http://www.rosettacode.org/
+// Guess the number: example taken from http://www.rosettacode.org/
 def random = new Random()
 def keyboard = new Scanner(System.in)
 def number = random.nextInt(10) + 1
