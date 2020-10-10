@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// Guess the number: example taked from http://www.rosettacode.org/
+// Guess the number: example taken from http://www.rosettacode.org/
 func main() {
 	fmt.Print("Guess number from 1 to 10: ")
 	rand.Seed(time.Now().Unix())
