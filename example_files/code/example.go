@@ -11,7 +11,7 @@ func main() {
 	fmt.Print("Guess number from 1 to 10: ")
 	rand.Seed(time.Now().Unix())
 	n := rand.Intn(10) + 1
-
+	
 	for guess := n; ; fmt.Print("No. Try again: ") {
 		switch _, err := fmt.Scan(&guess); {
 		case err != nil:
