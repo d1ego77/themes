@@ -6,6 +6,7 @@ fn main() {
  
     let n = rand::random::<u32>() % 10 + 1;
     loop {
+
         let mut line = String::new();
         std::io::stdin().read_line(&mut line).unwrap();
         let option: Result<u32,_> = line.trim().parse();
