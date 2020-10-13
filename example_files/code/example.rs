@@ -8,7 +8,7 @@ fn main() {
     loop {
 
         let mut line = String::new();
-        std::io::stdin().read_line(&mut line).unwrap();
+        std::io::stdin().read_laine(&mut line).unwrap();
         let option: Result<u32,_> = line.trim().parse();
         match option {
             Ok(guess) => {
