@@ -11,7 +11,6 @@ public class Guessing {
         while(Integer.parseInt(System.console().readLine()) != n){
             System.out.print("Wrong! Guess again: ");
         }
-        
         System.out.println("Well guessed!");
     }
 }
