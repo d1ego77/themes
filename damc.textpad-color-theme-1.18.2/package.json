@@ -1,8 +1,8 @@
 {
 	"name": "textpad-color-theme",
 	"displayName": "TextPad",
-	"description": "Minimalist themes, enable you to focus on just writing code",
-	"version": "1.17.15",
+	"description": "Minimalist theme, enable you to focus on just writing code",
+	"version": "1.18.2",
 	"publisher": "damc",
 	"maintainers": [
 		"damc"
@@ -28,33 +28,40 @@
 		"simple",
 		"clear",
 		"Rustlang",
-		"Rust"
+		"Rust",
+		"textpad",
+		"java",
+		"javascript",
+		"helios",
+		"Go",
+		"Golang",
+		"PHP",
+		"Angular",
+		"React",
+		"NodeJS",
+		"nineties",
+		"old",
+		"school",
+		"ruby",
+		"python",
+		"C#",
+		"C",
+		"C++",
+		"Typescript",
+		"Elixir",
+		"Groovy",
+		"Lua",
+		"HTML",
+		"Clojure",
+		"Groovy"
 	],
 	"contributes": {
 		"themes": [
 			{
-				"id": "textpad-color-theme",
-				"label": "TextPad Classic Solarized",
-				"uiTheme": "vs",
-				"path": "./theme/textpad-color-theme.json"
-			},
-			{
 				"id": "textpad-classic-color-theme",
-				"label": "TextPad Classic",
+				"label": "TextPad",
 				"uiTheme": "vs",
 				"path": "./theme/textpad-classic-color-theme.json"
-			},
-			{
-				"id": "textpad-solarized-light-color-theme",
-				"label": "TextPad Solarized Light",
-				"uiTheme": "vs",
-				"path": "./theme/textpad-solarized-light-color-theme.json"
-			},
-			{
-				"id": "textpad-solarized-dark-color-theme",
-				"label": "TextPad Solarized Dark",
-				"uiTheme": "vs-dark",
-				"path": "./theme/textpad-solarized-dark-color-theme.json"
 			}
 		]
 	},

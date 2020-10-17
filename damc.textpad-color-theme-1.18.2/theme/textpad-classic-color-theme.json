@@ -51,10 +51,10 @@
     },
     {
       "name": "Numerics",
-      "scope":["constant.numeric","constant.language","constant.numeric.decimal.java"],
+      "scope":["constant.numeric","constant.numeric.decimal.java"],
       "settings": {
         //"foreground": "#cb4b16"
-        "foreground": "#cb4b16",
+        "foreground": "#000000",//"#cb4b16",
         "fontStyle": ""
        //"foreground": "#839496"
         
@@ -62,7 +62,7 @@
     },
     {
       "name": "Numerics",
-      "scope":["keyword.operator.arithmetic", "constant.character.escape", "keyword.operator.other.elixir"],
+      "scope":["keyword.operator.arithmetic", "constant.character.escape", "keyword.operator.other.elixir", "constant.language"],
       "settings": {
         //"foreground": "#cb4b16"
         "foreground": "#cb4b16",
@@ -121,14 +121,14 @@
   "colors": {
       // Base
         // "foreground": "",
-        "focusBorder": "#8b8675ce",
+        "focusBorder": "#faf9f9",
         // "contrastActiveBorder": "",
         // "contrastBorder": "",
 
         // "widget.shadow": "",
 
-        "input.background": "#FFFFFF",
-        "input.border": "#586E75AA",
+        "input.background": "#e9e9e9",
+        "input.border": "#faf9f9",
         "input.foreground": "#586E75",
         "input.placeholderForeground": "#586E75AA",
         "inputOption.activeBorder": "#D3AF86",
@@ -257,23 +257,23 @@
         // "tab.inactiveForeground": "",
 
         // Workbench: Activity Bar
-        "activityBar.border": "#e7e4e4",
-        "activityBar.background": "#ffffff",         //"activityBar.background": "#DDD6C1",
-        "activityBar.foreground": "#6063BF",
+        "activityBar.border": "#eeeeee",
+        "activityBar.background": "#faf9f9",         //"activityBar.background": "#DDD6C1",
+        "activityBar.foreground": "#578a92",
         "activityBar.inactiveForeground": "#cac7c7",
         "activityBarBadge.background": "#FB4B48",//"activityBarBadge.background": "#B58900",
         "activityBarBadge.foreground": "#fff8f8",
         // "activityBarBadge.foreground": "",
 
         // Workbench: Panel
-        // "panel.background": "",
+        "panel.background": "#faf9f9",
         "panel.border": "#DDD6C1",
-        // "panelTitle.activeBorder": "",
-        // "panelTitle.activeForeground": "",
-        // "panelTitle.inactiveForeground": "",
+        "panelTitle.activeBorder": "#578a92",
+        "panelTitle.activeForeground": "#4D7B82",
+        "panelTitle.inactiveForeground": "#4d7b82ad",
 
         // Workbench: Side Bar
-        "sideBar.background": "#ffffff",// "#AEB8CA",//"sideBar.background": "#EEE8D5",
+        "sideBar.background": "#faf9f9",// "#AEB8CA",//"sideBar.background": "#EEE8D5",
         "sideBar.foreground": "#424242",
         "sideBarTitle.foreground": "#586E75",
         "sideBarSectionHeader.background": "#DADADA",// "#c2b99e",
@@ -309,23 +309,24 @@
         "extensionButton.prominentHoverBackground": "#818181",
 
         // Workbench: Terminal
-        // Colors sourced from the official palette http://ethanschoonover.com/solarized
-        "terminal.ansiBlack": "#073642",
-        "terminal.ansiRed": "#dc322f",
-        "terminal.ansiGreen": "#859900",
-        "terminal.ansiYellow": "#b58900",
-        "terminal.ansiBlue": "#268bd2",
-        "terminal.ansiMagenta": "#d33682",
-        "terminal.ansiCyan": "#2aa198",
-        "terminal.ansiWhite": "#eee8d5",
-        "terminal.ansiBrightBlack": "#586e75",
-        "terminal.ansiBrightRed": "#cb4b16",
-        "terminal.ansiBrightGreen": "#586e75",
-        "terminal.ansiBrightYellow": "#657b83",
-        "terminal.ansiBrightBlue": "#657b83",
-        "terminal.ansiBrightMagenta": "#6c71c4",
-        "terminal.ansiBrightCyan": "#93a1a1",
-        "terminal.ansiBrightWhite": "#eee8d5",
+        "terminal.foreground": "#d4e7d4",
+        "terminal.background": "#243435",
+        "terminal.ansiBlack": "#757575",
+        "terminal.ansiBlue": "#4d7b82",
+        "terminal.ansiCyan": "#729494",
+        "terminal.ansiGreen": "#728c62",
+        "terminal.ansiMagenta": "#8a7267",
+        "terminal.ansiRed": "#825d4d",
+        "terminal.ansiWhite": "#e0e0e0",
+        "terminal.ansiYellow": "#ada16d",
+        "terminal.ansiBrightBlack": "#8a8a8a",
+        "terminal.ansiBrightBlue": "#7ac3cf",
+        "terminal.ansiBrightCyan": "#ade0e0",
+        "terminal.ansiBrightGreen": "#98d9aa",
+        "terminal.ansiBrightMagenta": "#d6b2a1",
+        "terminal.ansiBrightRed": "#cf937a",
+        "terminal.ansiBrightWhite": "#e0e0e0",
+        "terminal.ansiBrightYellow": "#fae79d",
 
         // Interactive Playground
         "walkThrough.embeddedEditorBackground": "#00000014"
