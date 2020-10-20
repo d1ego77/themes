@@ -1,7 +1,3 @@
-
-
-
-
 public class Guessing {
 
     // Guess the number: example taken from http://www.rosettacode.org/
