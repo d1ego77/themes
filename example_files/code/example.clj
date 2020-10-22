@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 ;;Guess the number: example taken from http://www.rosettacode.org/
 (def target (inc (rand-int 10))
  

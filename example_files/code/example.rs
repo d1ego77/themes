@@ -1,5 +1,11 @@
 extern crate rand;
 
+const IMAGE_WIDTH: u32 = 80;
+
+impl WatchFace for image {
+    
+}
+
  // Guess the number: example taken from http://www.rosettacode.org/
 fn main() {
     println!("Type in an integer between 1 and 10 and press enter.");
