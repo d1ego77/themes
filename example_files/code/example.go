@@ -6,10 +6,6 @@ import (
 	"time"
 )
 
-func prueba() {
-
-}
-
 // Guess the number: example taken from http://www.rosettacode.org/
 func main() {
 	fmt.Print("Guess number from k 1 to 10: ")
