@@ -1,83 +1,100 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#
-# Copyright 2014 Google Inc. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
 
-"""Simple command-line sample for Blogger.
-
-Command-line application that retrieves the users blogs and posts.
-
-Usage:
-  $ python blogger.py
-
-You can also get help on all the command-line flags the program understands
-by running:
-
-  $ python blogger.py --help
-
-To get detailed log output run:
-
-  $ python blogger.py --logging_level=DEBUG
-"""
-from __future__ import print_function
-
-__author__ = 'jcgregorio@google.com (Joe Gregorio)'
-
-import sys
-
-from oauth2client import client
-from googleapiclient import sample_tools
+import re
 
 
-def main(argv):
-  # Authenticate and construct service.
-  service, flags = sample_tools.init(
-      argv, 'blogger', 'v3', __doc__, __file__,
-      scope='https://www.googleapis.com/auth/blogger')
+class Emoticons:
+    POSITIVE = ["*O", "*-*", "*O*", "*o*", "* *",
+                ":P", ":D", ":d", ":p",
+                ";P", ";D", ";d", ";p",
+                ":-)", ";-)", ":=)", ";=)",
+                ":<)", ":>)", ";>)", ";=)",
+                "=}", ":)", "(:;)",
+                "(;", ":}", "{:", ";}",
+                "{;:]",
+                "[;", ":')", ";')", ":-3",
+                "{;", ":]",
+                ";-3", ":-x", ";-x", ":-X",
+                ";-X", ":-}", ";-=}", ":-]",
+                ";-]", ":-.)",
+                "^_^", "^-^"]
 
-  try:
+    NEGATIVE = [":(", ";(", ":'(",
+                "=(", "={", "):", ");",
+                ")':", ")';", ")=", "}=",
+                ";-{{", ";-{", ":-{{", ":-{",
+                ":-(", ";-(",
+                ":,)", ":'{",
+                "[:", ";]"
+                ]
 
-      users = service.users()
 
-      # Retrieve this user's profile information
-      thisuser = users.get(userId='self').execute()
-      print('This user\'s display name is: %s' % thisuser['displayName'])
+class ParseTweet(object):
+    # compile once on import
+    regexp = {"RT": "^RT", "MT": r"^MT", "ALNUM": r"(@[a-zA-Z0-9_]+)",
+              "HASHTAG": r"(#[\w\d]+)", "URL": r"([https://|http://]?[a-zA-Z\d\/]+[\.]+[a-zA-Z\d\/\.]+)",
+              "SPACES": r"\s+"}
+    regexp = dict((key, re.compile(value)) for key, value in regexp.items())
 
-      blogs = service.blogs()
+    def __init__(self, timeline_owner, tweet):
+        """ timeline_owner : twitter handle of user account. tweet - 140 chars from feed; object does all computation on construction
+            properties:
+            RT, MT - boolean
+            URLs - list of URL
+            Hashtags - list of tags
+        """
+        self.Owner = timeline_owner
+        self.tweet = tweet
+        self.UserHandles = ParseTweet.getUserHandles(tweet)
+        self.Hashtags = ParseTweet.getHashtags(tweet)
+        self.URLs = ParseTweet.getURLs(tweet)
+        self.RT = ParseTweet.getAttributeRT(tweet)
+        self.MT = ParseTweet.getAttributeMT(tweet)
+        self.Emoticon = ParseTweet.getAttributeEmoticon(tweet)
 
-      # Retrieve the list of Blogs this user has write privileges on
-      thisusersblogs = blogs.listByUser(userId='self').execute()
-      for blog in thisusersblogs['items']:
-        print('The blog named \'%s\' is at: %s' % (blog['name'], blog['url']))
+        # additional intelligence
+        if (self.RT and len(self.UserHandles) > 0):  # change the owner of tweet?
+            self.Owner = self.UserHandles[0]
+        return
 
-      posts = service.posts()
+    def __str__(self):
+        """ for display method """
+        return "owner %s, urls: %d, hashtags %d, user_handles %d, len_tweet %d, RT = %s, MT = %s" % \
+               (self.Owner, len(self.URLs), len(self.Hashtags), len(self.UserHandles), len(self.tweet), self.RT, self.MT)
 
-      # List the posts for each blog this user has
-      for blog in thisusersblogs['items']:
-        print('The posts for %s:' % blog['name'])
-        request = posts.list(blogId=blog['id'])
-        while request != None:
-          posts_doc = request.execute()
-          if 'items' in posts_doc and not (posts_doc['items'] is None):
-            for post in posts_doc['items']:
-              print('  %s (%s)' % (post['title'], post['url']))
-          request = posts.list_next(request, posts_doc)
+    @staticmethod
+    def getAttributeEmoticon(tweet):
+        """ see if tweet is contains any emoticons, +ve, -ve or neutral """
+        emoji = list()
+        for tok in re.split(ParseTweet.regexp["SPACES"], tweet.strip()):
+            if tok in Emoticons.POSITIVE:
+                emoji.append(tok)
+                continue
+            if tok in Emoticons.NEGATIVE:
+                emoji.append(tok)
+        return emoji
 
-  except client.AccessTokenRefreshError:
-    print ('The credentials have been revoked or expired, please re-run'
-      'the application to re-authorize')
+    @staticmethod
+    def getAttributeRT(tweet):
+        """ see if tweet is a RT """
+        return re.search(ParseTweet.regexp["RT"], tweet.strip()) is not None
 
-if __name__ == '__main__':
-  main(sys.argv)
+    @staticmethod
+    def getAttributeMT(tweet):
+        """ see if tweet is a MT """
+        return re.search(ParseTweet.regexp["MT"], tweet.strip()) is not None
+
+    @staticmethod
+    def getUserHandles(tweet):
+        """ given a tweet we try and extract all user handles in order of occurrence"""
+        return re.findall(ParseTweet.regexp["ALNUM"], tweet)
+
+    @staticmethod
+    def getHashtags(tweet):
+        """ return all hashtags"""
+        return re.findall(ParseTweet.regexp["HASHTAG"], tweet)
+
+    @staticmethod
+    def getURLs(tweet):
+        r""" URL : [http://]?[\w\.?/]+"""
+        return re.findall(ParseTweet.regexp["URL"], tweet)
