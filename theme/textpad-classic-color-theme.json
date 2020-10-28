@@ -30,7 +30,7 @@
   },
   {
     "name": "Strings: Escape Sequences",
-    "scope": "constant.character.escape",
+    "scope": ["constant.character.escape", "variable.other.constant"],
     "settings": {
       "foreground": "#AD4011"
     }
@@ -38,6 +38,7 @@
   {
     "name": "Numbers, Characters",
     "scope": [
+      "entity.name.function.preprocessor",
       "constant.character",
       "constant.keyword",
       "constant",
@@ -72,7 +73,7 @@
       "storage.type.primitive",
       "support.type.primitive",
       "storage.type.built-in.primitive",
-      "support",  
+
     ],
     "settings": {
       "foreground": "#1100ff"
@@ -82,9 +83,11 @@
     "name": "Classes and functions",
     "scope": [
      "variable.other.object",
-     "variable.other.constant",
+     //"variable.other.constant",
      "entity.other.attribute-name",
      "storage.type",
+     "support.type.property-name.json",
+     "support",  
     ],
     "settings": {
       "foreground": "#0000AA"
