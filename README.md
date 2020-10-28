@@ -5,18 +5,13 @@ This theme was designed to be simple, it is based on color scheme of the old Tex
 
 ## Syntax Palette
 
-| Scope       | Color                                              | Scope   | RGB                |
+| Scope       | Color                                              | Scope   | Color              |
 | ------------| -------------------------------------------------- | ------- | ------------------ |
 | Background | ![#F7F7F7](https://placehold.it/35/F7F7F7/?text=+) | Foreground | ![#000000](https://placehold.it/35/000000/?text=+) |
 | Comments | ![#008000](https://placehold.it/35/008000/?text=+) | Keywords/Primitives | ![#1100FF](https://placehold.it/35/1100FF/?text=+) |
 | Brackets | ![#DC322F](https://placehold.it/35/DC322F/?text=+) | Strings | ![#008080](https://placehold.it/35/008080/?text=+) |
 | Storage/Support | ![#0000AA](https://placehold.it/35/0000AA/?text=+) | Constants | ![#AD4011](https://placehold.it/35/AD4011/?text=+) |
 
-
-<!-- | Background           | ![#F7F7F7](https://placehold.it/25/F7F7F7/?text=+) | #F7F7F7 |Foreground           | ![#000000](https://placehold.it/25/000000/?text=+) | #000000 |
-| Comments             | ![#008000](https://placehold.it/25/008000/?text=+) | #008000 |Keywords/Primitives  | ![#1100FF](https://placehold.it/25/1100FF/?text=+) | #1100FF |
-| Brackets             | ![#DC322F](https://placehold.it/25/DC322F/?text=+) | #DC322F | Strings | `![#008080](https://placehold.it/25/008080/?text=+) | #008080 | 
-| Storage-Support      | ![#0000AA](https://placehold.it/25/0000AA/?text=+) | #0000AA | Constants            | ![#AD4011](https://placehold.it/25/AD4011/?text=+) | #AD4011 | -->
 
 ## Preview
 <p align="center">
