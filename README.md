@@ -25,7 +25,7 @@ Follow these steps:
 
 1. Disable the VSCode explorer options "Open editors", "Outline", "NPM Scripts"
 
-2. Install [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2), [PT Mono](https://fonts.google.com/specimen/PT+Mono#standard-styles) font, and [TextPad icon theme](https://marketplace.visualstudio.com/items?itemName=damc.textpad-icon-theme)(Minimal Black (Chalice Edition)). 
+2. Install [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2), [JetBrains Mono](https://www.jetbrains.com/lp/mono/) font, and [TextPad icon theme](https://marketplace.visualstudio.com/items?itemName=damc.textpad-icon-theme)(Minimal Black (Chalice Edition)). 
 
 3. Use these settings:
 
