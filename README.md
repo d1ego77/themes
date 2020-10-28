@@ -15,7 +15,8 @@ This theme was designed to be simple, it is based on color scheme of the old Tex
 
 ## Preview
 <p align="center">
-<img  src="https://raw.githubusercontent.com/damc-code/themes/master/damc.textpad-color.images.examples/textpad.png"  title="TextPad" />
+<img  src="https://raw.githubusercontent.com/damc-code/themes/master/damc.textpad-color.images.examples/texpad.png"  
+title="TextPad" />
 </p>
 Tested languages: Rust, Go, Python, Ruby, Java, Javascript, C#, C, C++, Typescript, PHP, Elixir, Groovy, Lua, Clojure, HTML
 
