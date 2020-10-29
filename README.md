@@ -32,7 +32,7 @@ Follow these steps:
 ```js
 
 {
-"editor.fontFamily": "PT Mono, Cascadia Code,'Courier New'",
+"editor.fontFamily": "JetBrains Mono, Cascadia Code,'Courier New'",
 "editor.fontLigatures": true,
 "editor.fontSize": 12,
 "breadcrumbs.enabled": false,

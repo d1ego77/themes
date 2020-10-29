@@ -66,6 +66,7 @@
       "keyword.operator.logical.python",
       "keyword.operator.wordlike",
       "keyword.operator.word",
+      "keyword.operator.misc",
       "keyword",
       "storage",
       "entity.name.tag", 
