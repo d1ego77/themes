@@ -2,7 +2,7 @@
 	"name": "textpad-icon-theme",
 	"displayName": "TextPad Icon Theme",
 	"description": "A simple MacOS Modern Icon Theme Fork",
-	"version": "1.3.0",
+	"version": "1.19.19",
 	"publisher": "damc",
 	"engines": {
 		"vscode": "^1.25.0"
