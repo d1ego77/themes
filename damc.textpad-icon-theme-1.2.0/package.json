@@ -2,7 +2,7 @@
 	"name": "textpad-icon-theme",
 	"displayName": "TextPad Icon Theme",
 	"description": "A simple MacOS Modern Icon Theme Fork",
-	"version": "1.19.19",
+	"version": "1.4.2",
 	"publisher": "damc",
 	"engines": {
 		"vscode": "^1.25.0"
@@ -33,33 +33,38 @@
 		"iconThemes": [
 			{
 				"id": "textpad-legit-finder-icon-theme",
-				"label": "TextPad - Legit Finder Icons",
+				"label": "TextPad - Legit Finder",
 				"path": "./themes/icon/legit-finder.json"
 			},
 			{
 				"id": "textpad-legit-xcode-icon-theme",
-				"label": "TextPad - Legit Xcode Icons",
+				"label": "TextPad - Legit Xcode",
 				"path": "./themes/icon/legit-xcode.json"
 			},
 			{
 				"id": "textpad-minimal-finder-icon-theme",
-				"label": "TextPad - Minimal Finder Icons",
+				"label": "TextPad - Minimal Finder",
 				"path": "./themes/icon/minimal-finder.json"
 			},
 			{
 				"id": "textpad-minimal-xcode-icon-theme",
-				"label": "TextPad - Minimal Xcode Icons",
+				"label": "TextPad - Minimal Xcode",
 				"path": "./themes/icon/minimal-xcode.json"
 			},
 			{
 				"id": "textpad-minimal-mono-icon-theme",
-				"label": "TextPad - Minimal Monochrome Icons",
+				"label": "TextPad - Minimal Monochrome",
 				"path": "./themes/icon/minimal-mono.json"
 			},
 			{
 				"id": "textpad-minimal-black-icon-theme",
-				"label": "TextPad - Minimal Black Icons",
+				"label": "TextPad - Minimal Black",
 				"path": "./themes/icon/minimal-black.json"
+			},
+			{
+				"id": "textpad-minimal-black-chalice-icon-theme",
+				"label": "TextPad - Minimal Black (Chalice edition)",
+				"path": "./themes/icon/minimal-black-chalice.json"
 			}
 		]
 	},
