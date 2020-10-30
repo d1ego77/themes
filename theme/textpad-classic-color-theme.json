@@ -320,7 +320,7 @@
         // "editorSuggestWidget.border": "",
         // "editorSuggestWidget.foreground": "",
         // "editorSuggestWidget.highlightForeground": "",
-         "editorSuggestWidget.selectedBackground": "#e1e4e7",
+         "editorSuggestWidget.selectedBackground": "#CECED2",
 
         // Editor: Peek View
         "peekViewResult.background": "#EEE8D5",
