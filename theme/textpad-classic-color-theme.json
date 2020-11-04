@@ -230,7 +230,8 @@
   "colors": {
       // Base
         // "foreground": "",
-        "focusBorder": "#c2c2c2",
+        //"focusBorder": "#c2c2c2",
+        "focusBorder": "#E1E1E3",
         // "contrastActiveBorder": "",
         // "contrastBorder": "",
 
