@@ -160,7 +160,7 @@
         //"list.activeSelectionBackground": "#DFCA88",
         //"list.activeSelectionForeground": "#6C6C6C",
         "list.focusBackground":"#CECED2",// "#D1CBB8",
-        "list.hoverBackground": "#E1E1E3",//"#399ABE44",//
+        "list.hoverBackground": "#DFCB8821",//"#399ABE44",//
         "list.inactiveSelectionBackground": "#CECED2",// "#D1CBB8",
         "list.highlightForeground": "#6c71c4",//"list.highlightForeground": "#B58900",
         
